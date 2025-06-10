@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart AI Agent for Students</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart AI Agent Dashboard</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Upload</a></li>
+      <li><a href="#allFiles" id="myFilesBtn">My Files</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="upload-section">
+      <h2>Upload Your Work</h2>
+      <form id="uploadForm">
+        <input type="file" id="fileInput" />
+        <button type="submit">Upload</button>
+      </form>
+      <div id="fileList"></div>
+    </section>
+
+    <section id="allFiles" style="margin-top: 30px;">
+      <h2>All Upload Files</h2>
+      <div id="fileGallery"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

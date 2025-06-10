@@ -1,0 +1,13 @@
+node_modules/
+
+
+venv/
+# Python bytecode files
+__pycache__/
+*.__pycache__
+*.py[cod]
+*.pyd
+
+
+.DS_Store
+Thumbs.db
