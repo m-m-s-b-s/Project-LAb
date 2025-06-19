@@ -3,7 +3,7 @@
 A prototype web app that uses camera + GPS to guide users to Katsuji Mate Temple.
 
 ### Live Demo:
-👉 [Click here](https://m-m-s-b-s.github.io/Project-LAb/Ar_Navigation_System/)
+👉 [Click here]http://127.0.0.1:5500/index.html
 
 ### Features:
 - Real-time camera overlay
