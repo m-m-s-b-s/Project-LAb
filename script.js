@@ -1,24 +1,27 @@
-<<<<<<< HEAD
 const video = document.getElementById('video');
 const overlay = document.getElementById('overlay');
 const arrow = document.getElementById('direction-arrow');
 const fromInput = document.getElementById('from');
 const toInput = document.getElementById('to');
 
-// Start camera with back-facing preference
+// Start camera with back-facing preference (mobile-safe version)
 navigator.mediaDevices.getUserMedia({
-  video: { facingMode: { exact: "environment" } }
+  video: { facingMode: "environment" }
 })
-.then(stream => { video.srcObject = stream; })
-.catch(err => { overlay.innerText = "Camera error"; });
+.then(stream => {
+  video.srcObject = stream;
+})
+.catch(err => {
+  overlay.innerText = "Camera error: " + err.message;
+});
 
 refreshDirection(); // Auto-refresh on page load
 
 function refreshDirection() {
   overlay.innerText = "Calculating...";
 
-  // Destination coordinates
-  let destLat = 35.835400; // Katsuji Mate Temple
+  // Default destination: Katsuji Mate Temple
+  let destLat = 35.835400;
   let destLon = 139.610400;
 
   // Allow user to override destination
@@ -39,7 +42,7 @@ function refreshDirection() {
       const currentLon = position.coords.longitude;
       showDirection(currentLat, currentLon, destLat, destLon);
     }, err => {
-      overlay.innerText = "Location error";
+      overlay.innerText = "Location error: " + err.message;
     });
   }
 }
@@ -82,4 +85,3 @@ function updateArrow(message) {
   else if (message.includes("Turn around")) arrow.src = "images/uturn.png";
   else arrow.style.display = "none";
 }
-//Event listening for input change
