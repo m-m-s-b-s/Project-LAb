@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const video = document.getElementById('video');
 const overlay = document.getElementById('overlay');
 const arrow = document.getElementById('direction-arrow');
